@@ -1,37 +1,27 @@
+"use client"
 import React from "react";
-import SpecialOffer from "../Component/SpecialOffer.js";
-import Banner from "../Component/Banner";
-
+import SpecialOffer from "../components/SpecialOffer.js";
+import Banner from "../components/Banner.js";
 const Header = () => {
   return (
-    <header className="bg-white shadow-md px-6 py-4 flex items-center justify-between">
+    <div className="flex flex-col"><header className="bg-white shadow-md px-6 py-4 flex items-center justify-between">
       <h1 className="text-black text-2xl font-bold">Design Gurus</h1>
       <nav>
-        <ul className="flex space-x-4">
+        <ul className="flex space-x-4 ">
           <li>
-            <a href="/courses" className="text-blue-500 font-semibold hover:text-orange-600">
-              Courses
-            </a>
+            <a href="/courses" className="text-blue-500 font-semibold hover:text-orange-600">Courses</a>
           </li>
           <li>
-            <a href="/pricing" className="text-blue-500 font-semibold hover:text-orange-600">
-              Pricing
-            </a>
+            <a href="/pricing" className="text-blue-500 font-semibold hover:text-orange-600">Pricing</a>
           </li>
           <li>
-            <a href="/mock-interviews" className="text-blue-500 font-semibold hover:text-orange-600">
-              Mock Interviews
-            </a>
+            <a href="/mock-interviews" className="text-blue-500 font-semibold hover:text-orange-600">Mock Interviews</a>
           </li>
           <li>
-            <a href="/interview-bootcamp" className="text-blue-500 font-semibold hover:text-orange-600">
-              Interview Bootcamp
-            </a>
+            <a href="/interview-bootcamp" className="text-blue-500 font-semibold hover:text-orange-600">Interview Bootcamp</a>
           </li>
           <li>
-            <a href="/guides" className="text-blue-500 font-semibold hover-text-orange-600">
-              Guides
-            </a>
+            <a href="/guides" className="text-blue-500 font-semibold hover:text-orange-600">Guides</a>
           </li>
         </ul>
       </nav>
@@ -39,22 +29,24 @@ const Header = () => {
         <a href="/contact-us" className="text-blue-500 font-semibold hover:text-orange-600">
           Contact Us
         </a>
-        <a href="/login" className="text-blue-500 font-semibold hover:text-orange-600 flex items-center">
+        <a href="/login" className="text-blue-500 font-semibold hover:text-orange-600 flex items-center ">
           <img className="pr-1" width="24" height="24" src="https://img.icons8.com/ios-filled/50/login-rounded-right.png" alt="Login" />
           Login
         </a>
-        <a href="/signup" className="text-blue-500 font-semibold hover:text-orange-600 flex items-center">
-          <img
-            className="pr-1"
-            width="24"
-            height="24"
-            src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/external-add-user-tanah-basah-basic-outline-tanah-basah-2.png"
-            alt="Signup"
-          />
+
+        <a href="/signup" className="text-blue-500 font-semibold hover:text-orange-600 flex items-center ">
+          <img className="pr-1" width="24" height="24" src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/external-add-user-tanah-basah-basic-outline-tanah-basah-2.png" alt="Signup" />
           Signup
         </a>
       </div>
+
+
     </header>
+    
+    <SpecialOffer className='bg-blue-400 flex justify-around h-10' /> 
+    <Banner className='bg-gray-100 py-5 ' />
+    </div>
+
   );
 };
 

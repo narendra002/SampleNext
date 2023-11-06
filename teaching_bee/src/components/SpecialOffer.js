@@ -1,3 +1,4 @@
+'use client'
 import React, { useState, useEffect } from "react";
 
 const SpecialOffer = () => {
@@ -36,10 +37,11 @@ const SpecialOffer = () => {
   }, [showBanner]);
 
   return (
-    <div className="flex bg-blue-400 p-4 justify-center h-10 text-white">
+   
+    <div className="flex  bg-blue-400 p-4 justify-around text-white">
       {showBanner && (
         <>
-          <div className="flex flex-col items-center w-5/6 justify-center text-center mr-14">
+          <div className="flex flex-col items-center  justify-around text-center pl-14">
             <p className="text-xl font-bold mb-2">
               Special Offer: Get an additional 20% Off on Lifetime and Yearly subscription
             </p>
@@ -66,12 +68,13 @@ const SpecialOffer = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center">
+          <div className="flex justify-end items-center">
             <img onClick={closeBanner} width="24" height="24" src="https://img.icons8.com/ios/50/multiply.png" alt="close" />
           </div>
         </>
       )}
     </div>
+
   );
 };
 
