@@ -2,15 +2,15 @@ import React from 'react';
 
 function Card() {
   return (
-    <div className="max-w-md mx-auto my-8 rounded overflow-hidden shadow-2xl bg-white p-6 ">
+    <div className="max-w-md mx-auto my-8 rounded-lg overflow-hidden shadow-2xl bg-white p-6 ">
       <div className="py-2 flex items-center space-x-1">
         {/* Assuming you have a star image for the rating */}
         {[1, 2, 3, 4, 5].map((index) => (
           <img
             key={index}
-            src="https://img.icons8.com/emoji/48/star-emoji.png"
+             src="https://img.icons8.com/sf-black-filled/64/ff2d55/star.png"
             alt={`star-${index}`}
-            className="w-6 h-6 inline"
+            className="w-6 h-6 inline "
           />
         ))}
       </div>
