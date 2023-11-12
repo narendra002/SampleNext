@@ -3,6 +3,7 @@ import React from "react";
 import SpecialOffer from "../components/SpecialOffer.js";
 import Banner from "../components/Banner.js";
 import Testimonials from "@/components/Testimonials.jsx";
+import FaqSection from "@/components/Faq.jsx";
 const Header = () => {
   return (
     // <div className="flex flex-col"><header className="bg-white shadow-md px-6 py-4 flex items-center justify-between">
@@ -49,6 +50,7 @@ const Header = () => {
 //    </div>
 <div>
   <Testimonials/>
+  <FaqSection/>
 </div>
 
   );
