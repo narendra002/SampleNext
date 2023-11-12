@@ -8,7 +8,7 @@ import Card from './Card';
 
 const Testimonials = () => {
   const commonSettings = {
-    dots: true,
+    // dots: true,
     infinite: true,
     speed: 10000,
     slidesToScroll: 1,
