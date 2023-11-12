@@ -1,6 +1,7 @@
-"use client"
 import React, { useEffect, useState } from 'react';
-import Slider from 'react-slick';
+import dynamic from 'next/dynamic'; // Import dynamic from 'next/dynamic'
+
+const Slider = dynamic(() => import('react-slick'), { ssr: false }); // Use dynamic to import Slider on the client side
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Card from './Card';
@@ -49,18 +50,25 @@ const Testimonials = () => {
       setSlidesToShow(getSlidesToShow());
     };
 
-    window.addEventListener('resize', handleResize);
+    // Check if window is defined before adding event listener
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', handleResize);
+    }
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      // Check if window is defined before removing event listener
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('resize', handleResize);
+      }
     };
   }, []);
 
   function getSlidesToShow() {
-    const screenWidth = window.innerWidth;
+    // Check if window is defined before using it
+    const screenWidth = typeof window !== 'undefined' ? window.innerWidth : 0;
 
     if (screenWidth < 576) {
-      return 0.82;
+      return 0.7;
     } else if (screenWidth < 768) {
       return 2;
     } else if (screenWidth < 992) {
