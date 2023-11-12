@@ -38,7 +38,7 @@ const Testimonials = () => {
     {
       breakpoint: 1200, // Extra-large devices
       settings: {
-        slidesToShow: 3.3,
+        slidesToShow: 3,
       },
     },
   ];

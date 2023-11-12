@@ -2,7 +2,7 @@ import React from 'react';
 
 function Card() {
   return (
-    <div className=" w-96 h-90 mx-auto my-4 rounded-lg overflow-hidden shadow-2xl bg-white p-6">
+    <div className="w-[98%] md:max-w-md lg:max-w-lg xl:max-w-xl mx-1 my-8 rounded-lg overflow-hidden shadow-2xl bg-white p-6">
       <div className="py-2 flex items-center space-x-1">
         {[1, 2, 3, 4, 5].map((index) => (
           <img
