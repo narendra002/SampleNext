@@ -20,7 +20,7 @@ const Testimonials = () => {
     {
       breakpoint: 576, // Small devices (phones)
       settings: {
-        slidesToShow: 0.82,
+        slidesToShow: 0.77,
       },
     },
     {
@@ -68,7 +68,7 @@ const Testimonials = () => {
     const screenWidth = typeof window !== 'undefined' ? window.innerWidth : 0;
 
     if (screenWidth < 576) {
-      return 0.7;
+      return 0.69;
     } else if (screenWidth < 768) {
       return 2;
     } else if (screenWidth < 992) {
