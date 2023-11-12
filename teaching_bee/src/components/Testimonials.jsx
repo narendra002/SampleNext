@@ -1,4 +1,5 @@
-import React from 'react';
+"use client"
+import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -41,12 +42,25 @@ const Testimonials = () => {
     },
   ];
 
-  // Dynamically calculate slidesToShow based on screen width
-  const getSlidesToShow = () => {
+  const [slidesToShow, setSlidesToShow] = useState(getSlidesToShow());
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSlidesToShow(getSlidesToShow());
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  function getSlidesToShow() {
     const screenWidth = window.innerWidth;
 
     if (screenWidth < 576) {
-      return 0.7;
+      return 0.82;
     } else if (screenWidth < 768) {
       return 2;
     } else if (screenWidth < 992) {
@@ -54,11 +68,11 @@ const Testimonials = () => {
     } else {
       return 3.3;
     }
-  };
+  }
 
   const settings = {
     ...commonSettings,
-    slidesToShow: getSlidesToShow(),
+    slidesToShow,
     responsive: responsiveSettings,
   };
 
