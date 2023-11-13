@@ -9,7 +9,7 @@ const FaqItem = ({ faq }) => {
 
   return (
     <div className={`faq-item bg-blue-50 p-4 rounded-lg transition-all duration-700 ease-in-out transform shadow-md mb-4 md:mb-0 ${isOpen ? 'border-2 border-blue-500 rounded-lg' : ''}`}>
-      <div className="flex flex-row justify-between md:flex-row md:justify-between md:items-center">
+      <div className="flex flex-row justify-between items-center md:flex-row md:justify-between md:items-center">
         <h3 className="text-lg text-black font-medium mb-2 md:mb-0 md:text-xl">{faq.question}</h3>
         <div
           className={`cursor-pointer ${isOpen ? 'text-blue-500' : 'text-blue-700 hover:text-white'}`}
@@ -104,7 +104,7 @@ const FaqSection = () => {
   };
 
   return (
-    <div className="faq-section max-w-3/4 mx-14 mt-8">
+    <div className="faq-section mx-8 mt-8">
       <FaqHeading />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {faqData.map((faq, index) => (

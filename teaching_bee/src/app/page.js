@@ -4,6 +4,10 @@ import SpecialOffer from "../components/SpecialOffer.js";
 import Banner from "../components/Banner.js";
 import Testimonials from "@/components/Testimonials.jsx";
 import FaqSection from "@/components/Faq.jsx";
+import InterviewReadyComponent from "@/components/EndBanner.jsx";
+import Footer from "@/components/Footer.jsx";
+import Companies from "@/components/Company.jsx";
+import Blog from "@/components/Blog.jsx";
 const Header = () => {
   return (
     // <div className="flex flex-col"><header className="bg-white shadow-md px-6 py-4 flex items-center justify-between">
@@ -49,8 +53,15 @@ const Header = () => {
     // <Banner className='bg-gray-100 py-5 ' />
 //    </div>
 <div className="bg-white">
+  <Companies/>
   <Testimonials/>
+  <Blog/>
   <FaqSection/>
+  <InterviewReadyComponent/>
+  <Footer/>
+  
+  
+  
 </div>
 
   );
