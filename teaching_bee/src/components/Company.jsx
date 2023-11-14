@@ -12,7 +12,7 @@ const Companies = () => {
   ];
 
   return (
-    <div className="container mx-auto my-8">
+    <div className="container mx-auto my-4">
       <h2 className="text-2xl text-gray-500 text-center mb-4">Our users received offers from top companies like</h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-center items-start">
         {companies.map((company, index) => (

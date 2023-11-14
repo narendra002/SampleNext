@@ -52,10 +52,15 @@ const Header = () => {
     // <SpecialOffer className='bg-blue-400 flex justify-around h-10' /> 
     // <Banner className='bg-gray-100 py-5 ' />
 //    </div>
-<div className="bg-white">
+<div className="bg-white  m-14">
   <Companies/>
   <Testimonials/>
-  <Blog/>
+  <div className="flex">
+  <Blog/> 
+  <Blog/><Blog/> 
+  
+    </div>
+ 
   <FaqSection/>
   <InterviewReadyComponent/>
   <Footer/>

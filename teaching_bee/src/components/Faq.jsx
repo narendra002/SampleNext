@@ -8,18 +8,18 @@ const FaqItem = ({ faq }) => {
   };
 
   return (
-    <div className={`faq-item bg-blue-50 p-4 rounded-lg transition-all duration-700 ease-in-out transform shadow-md mb-4 md:mb-0 ${isOpen ? 'border-2 border-blue-500 rounded-lg' : ''}`}>
+    <div className={`faq-item bg-blue-50 p-4 rounded-lg transition-all duration-50 ease-in-out transform shadow-md mb-4 md:mb-0 ${isOpen ? 'border-2 border-blue-500 rounded-lg' : ''}`}>
       <div className="flex flex-row justify-between items-center md:flex-row md:justify-between md:items-center">
-        <h3 className="text-lg text-black font-medium mb-2 md:mb-0 md:text-xl">{faq.question}</h3>
+        <h3 className="text-lg text-gray-800 font-sm mb-2 md:mb-0 md:text-xl">{faq.question}</h3>
         <div
           className={`cursor-pointer ${isOpen ? 'text-blue-500' : 'text-blue-700 hover:text-white'}`}
           onClick={handleToggle}
         >
           {isOpen ? (
-            <span className="text-4xl font-bold text-white bg-blue-500 px-3 rounded-lg">-</span>
+            <span className="text-3xl  text-white bg-blue-500 px-3 rounded-lg">-</span>
           ) : (
-            <span className="text-4xl font-bold hover:bg-blue-500 px-2 rounded-lg">+</span>
-          )}
+            <span className="text-3xl  px-2 hover:bg-blue-500 hover:text-white rounded-lg border border-blue-500">+</span>
+            )}
         </div>
       </div>
       {isOpen && <p className="text-gray-600 font-medium mt-2 delay-700 transition-all ease-linear">{faq.answer}</p>}
@@ -93,10 +93,7 @@ const FaqSection = () => {
         question: 'Why do we use it?',
         answer: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
       },
-      {
-        question: 'Where does it come from?',
-        answer: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
-      },
+   
   ];
 
   const handleToggle = (index) => {
@@ -104,16 +101,19 @@ const FaqSection = () => {
   };
 
   return (
-    <div className="faq-section mx-8 mt-8">
-      <FaqHeading />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {faqData.map((faq, index) => (
-          <div key={index}>
-            <FaqItem faq={faq} isOpen={openIndex === index} onToggle={() => handleToggle(index)} />
-          </div>
-        ))}
-      </div>
+    <div className="faq-section mt-8 mx-4 md:mx-10">
+    <FaqHeading />
+    <div className="grid grid-cols-1 
+     
+    md:grid-cols-2 gap-4 md:gap-8">
+      {faqData.map((faq, index) => (
+        <div className="w-full md:w-[95%]" key={index}>
+          <FaqItem faq={faq} isOpen={openIndex === index} onToggle={() => handleToggle(index)} />
+        </div>
+      ))}
     </div>
+  </div>
+  
   );
 };
 

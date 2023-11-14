@@ -2,7 +2,7 @@ import React from 'react';
 
 function Blog() {
   return (
-    <div className="w-full md:w-2/6 lg:max-w-lg xl:max-w-xl mx-auto my-8 rounded-lg overflow-hidden shadow-2xl bg-white p-6">
+    <div className="w-full md:w-2/6 lg:max-w-lg xl:max-w-xl mx-2 my-8 rounded-lg overflow-hidden shadow-2xl bg-gray-100 p-6">
       <div className="flex items-center mb-4">
         <img className="w-12 h-12 rounded-full" src="https://img.icons8.com/clouds/100/user.png" alt="user" />
         <div className="ml-4 flex flex-col">

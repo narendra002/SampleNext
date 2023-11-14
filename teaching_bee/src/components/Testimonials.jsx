@@ -8,13 +8,15 @@ import Card from './Card';
 
 const Testimonials = () => {
   const commonSettings = {
-    // dots: true,
     infinite: true,
     speed: 10000,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 500, // Set the duration for each slide
+    autoplaySpeed: 500,
+    swipeToSlide: true, // Enables the ability to swipe to a slide by dragging or swiping with a mouse
+    // Add other settings as needed
   };
+  
 
   const responsiveSettings = [
     {
@@ -38,7 +40,7 @@ const Testimonials = () => {
     {
       breakpoint: 1200, // Extra-large devices
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 4,
       },
     },
   ];
