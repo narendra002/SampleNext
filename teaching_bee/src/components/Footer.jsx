@@ -12,8 +12,12 @@ const Footer = () => {
                     <p className="text-sm">
                         System Design explained with clear, concise videos. Saves time for your next big interview.
                     </p>
-                    
-                </div>
+                    <div className="flex mt-2">
+    <img className="mr-2" width="24" height="24" src="https://img.icons8.com/material-outlined/24/github.png" alt="github"/>
+    <img className="mr-2" width="24" height="24" src="https://img.icons8.com/material-outlined/24/github.png" alt="github"/>
+    <img className="mr-2" width="24" height="24" src="https://img.icons8.com/material-outlined/24/github.png" alt="github"/>
+    <img className="mr-2" width="24" height="24" src="https://img.icons8.com/material-outlined/24/github.png" alt="github"/>
+  </div>  </div>
 
                 {/* Support Section */}
                 <section className="w-full md:w-1/2 lg:w-1/4 px-4 mb-4">
