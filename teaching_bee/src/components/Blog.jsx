@@ -20,7 +20,7 @@ function Blog() {
         <img
           src='https://img.freepik.com/free-vector/flat-creativity-concept-illustration_52683-64279.jpg?w=740&t=st=1699875358~exp=1699875958~hmac=54889e085f1f57cc5cc85d2ef92efa8ea8fea03c339059c0ccabd1ac5a2ce1a6'
           alt="Blog Illustration"
-          className="w-full rounded-lg mix-blend-multiply"
+          className="w-full rounded-lg mix-blend-multiply opacity-75" // Adding opacity-75 for 75% transparency
         />
       </div>
     </div>
